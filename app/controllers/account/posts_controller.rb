@@ -3,4 +3,9 @@ class Account::PostsController < ApplicationController
   def index
     @posts = current_user.posts
   end
+
+  def edit
+    @posts = Post.find(params[:groups_id])
+  end
+  
 end
